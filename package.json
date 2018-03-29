@@ -1,0 +1,25 @@
+{
+  "name": "Prettier-test",
+  "version": "1.0.0",
+  "description": "Prettierを試す用",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier src/**/*.js",
+    "format:fix": "prettier --write src/**/*/js",
+    "format:js": "prettier-eslint src/**/*.js",
+    "format:css": "prettier-stylelint src/**/*.{css,pcss,scss}",
+    "lint:js": "yarn eslint src/**/*.js",
+    "lint:css": "yarn stylelint src/**/*.css",
+    "lint:fix": "eslint --fix src/**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "prettier": "^1.11.1",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^9.1.3"
+  }
+}

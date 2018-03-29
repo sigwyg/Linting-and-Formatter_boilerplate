@@ -1,0 +1,14 @@
+body {
+  color: red;
+  background-image: url(./example.png);
+}
+h1::after {
+  color: #ffc;
+  content: "🌟";
+}
+p {
+    font-weight: bold;
+}
+p {
+    font-weight: normal;
+}

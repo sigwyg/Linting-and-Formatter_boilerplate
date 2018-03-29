@@ -1,5 +1,5 @@
 body {
-  color: red;
+	  color: red;
   background-image: url(./example.png);
 }
 h1::after {

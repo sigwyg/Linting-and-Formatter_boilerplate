@@ -1,10 +1,9 @@
 {
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-idiomatic-order"
+  ],
   "rules": {
     "indentation": 4,
-    "color-named": "never",
-    "color-hex-length": "long",
-    "function-url-quotes": "always",
-    "no-duplicate-selectors": true,
-    "string-quotes": "single",
   }
 }

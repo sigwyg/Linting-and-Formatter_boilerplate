@@ -15,8 +15,8 @@ Formatterはコードの整形はするが警告出してくれないので、�
 - ESLint config
 - eslint-plugin-prettierとprettier-eslintの違い
 
-[Integrating with ESLint](https://prettier.io/docs/en/eslint.html)
-[Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
+- [Integrating with ESLint](https://prettier.io/docs/en/eslint.html)
+- [Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
 
 ## Install
 
@@ -52,9 +52,9 @@ postcss-srtingの内部で使われていて、今回の場合は`stylelint-idio
 stylefmtて良いツールがあったけど、stylelintが`--fix`に対応したので開発が止まってる。
 prettier使うか、`stylelint --fix`しろって感じらしい。
 
-[Stylistic issues](https://stylelint.io/VISION/#stylistic-issues)
-[Prettier + Stylelint: Writing Very Clean CSS (Or, Keeping Clean Code is a Two-Tool Game)](https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/)
-[Prettier for CSS](https://github.com/stylelint/stylelint/issues/2532)
+- [Stylistic issues](https://stylelint.io/VISION/#stylistic-issues)
+- [Prettier + Stylelint: Writing Very Clean CSS (Or, Keeping Clean Code is a Two-Tool Game)](https://css-tricks.com/prettier-stylelint-writing-clean-css-keeping-clean-code-two-tool-game/)
+- [Prettier for CSS](https://github.com/stylelint/stylelint/issues/2532)
 
 ## Note: prettier-stylelint(error!)
 
@@ -73,8 +73,8 @@ prettier-eslintから着想を得たらしい、prettier-stylelintがあるが�
 `{ "parser": "postcss" }` is deprecated. Prettier now treats it as `{ "parser": "css" }`.
 ```
 
-[Warning: `parser` with value "postcss" is deprecated. Use "css", "less" or "scss" instead.](https://github.com/hugomrdias/prettier-stylelint/issues/3)
-[Cannot set property 'singleQuote' of null](https://github.com/hugomrdias/prettier-stylelint/issues/9)
+- [Warning: `parser` with value "postcss" is deprecated. Use "css", "less" or "scss" instead.](https://github.com/hugomrdias/prettier-stylelint/issues/3)
+- [Cannot set property 'singleQuote' of null](https://github.com/hugomrdias/prettier-stylelint/issues/9)
 
 
 ## Vim Setup

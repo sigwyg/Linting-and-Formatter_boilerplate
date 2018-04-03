@@ -1,21 +1,21 @@
-## TL;DR
+# Linting-and-Formatter_boilerplate
+
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 LinterとFormatterの個人的なboilerplateっぽいの
 
 ## Feature
 
-- Linter: ESLint, Stylelint
-- Formatter: Prettier
+- Prettier -> ESLint
+- [eslint-config-standard](https://github.com/standard/eslint-config-standard)
+- Stylelint
+- [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
 
 Formatterはコードの整形はするが警告出してくれないので、人間が考える必要のないミスだけ修正させる方法が良い。
 
 ## To Do
 
 - Pre-commit Hook
-- ESLint config
-- eslint-plugin-prettierとprettier-eslintの違い
-
-- [Integrating with ESLint](https://prettier.io/docs/en/eslint.html)
 - [Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
 
 ## Install
@@ -28,19 +28,37 @@ OR
 
 ```
 $ yarn add -D prettier
-$ yarn add -D eslint prettier-eslint prettier-eslint-cli
-$ yarn add -D stylelint stylelint-order
+$ yarn add -D eslint eslint-plugin-prettier eslint-config-prettier
+$ yarn add -D eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
+$ yarn add -D stylelint stylelint-order stylelint-config-standard
 ```
 
 ## Usage
 
 ```
-$ prettier-eslint --write src/test.js
+$ eslint --fix src/**/*.js
+$ stylelint  --fix src/**/*.css
 ```
 
-`prettier-eslint`は、prettierで整形した結果をeslint --fixに渡す。
-`.prettierrc` と `.eslintrc` でルールが食い違う場合、結果的には`.eslintrc`に倣う挙動をする。
+## Note: ESLintと併用する場合
 
+PrettierとESLintと併用する場合、2つの方法がある
+
+1. `eslint-plugin-prettier` 
+    - ESLintのworkflowで処理する
+    - Prettierの出力が維持される
+    - .eslintrcにprettierが明記されるので判りやすい
+    - `eslint-config-prettier` を使えば、ESLintのPrettierと重複してるルールを無効化してくれる
+    - `eslint --fix` だけで、PrettierとESLintの自動修正を同時に行ってくれる
+    - [Integrating with ESLint](https://prettier.io/docs/en/eslint.html)
+2. `prettier-eslint`
+    - Prettierしてから`eslint --fix`に渡す
+    - Prettierのオプションは`.prettierrc`で管理する
+    - `prettier-eslint --write`で`eslint --fix`もしてる
+
+ESLintがPrettierを実行するか、PrettierがESLintに渡すか。
+ほとんど変わらないが、後者だと`--fix`なし実行ができないので、前者を採用する。
+あと、`prettier-eslint` の作者は[もう使ってない](https://twitter.com/kentcdodds/status/913760103118991361)とのこと。
 
 ## Note: CSSの場合
 
@@ -141,3 +159,7 @@ hook_add = '''
         autocmd BufWritePre *.scss Neoformat
     augroup END
 '''
+
+## 参考
+
+[Related Projects - Prettier](https://prettier.io/docs/en/related-projects.html#eslint-integrations)

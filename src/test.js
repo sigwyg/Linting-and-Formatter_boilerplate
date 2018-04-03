@@ -1,8 +1,13 @@
-"use strict";
+'use strict'
 
 var foo = {
-    bar: "bar string",
-  baz:11
-};
+  bar: 'bar string',
+  baz: 11,
+}
 
-console.log(foo);
+function hoge() {
+    name = prompt("Hey!")
+    return false
+}
+
+console.log(foo)

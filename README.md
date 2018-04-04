@@ -10,13 +10,10 @@ LinterとFormatterの個人的なboilerplateっぽいの
 - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
 - Stylelint
 - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
+- [Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
 
 Formatterはコードの整形はするが警告出してくれないので、人間が考える必要のないミスだけ修正させる方法が良い。
 
-## To Do
-
-- Pre-commit Hook
-- [Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
 
 ## Install
 
@@ -31,6 +28,7 @@ $ yarn add -D prettier
 $ yarn add -D eslint eslint-plugin-prettier eslint-config-prettier
 $ yarn add -D eslint-config-standard eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node
 $ yarn add -D stylelint stylelint-order stylelint-config-standard
+$ yarn add -D lint-staged husky
 ```
 
 ## Usage
@@ -39,6 +37,34 @@ $ yarn add -D stylelint stylelint-order stylelint-config-standard
 $ eslint --fix src/**/*.js
 $ stylelint  --fix src/**/*.css
 ```
+
+## Note: Pre-commit Hook
+
+全員にエディタプラグイン入れさせるのは現実的でないため、
+`git commit`すると自動でLinter/formatterが走るように設定しておく。
+
+```
+$ yarn add -D lint-staged husky
+```
+
+`package.json`に以下を追記。
+
+```
+  ...
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json}": [
+        "eslint --fix", "git add"
+    ],
+    "src/**/*.{css,scss}": [
+        "stylelint --fix", "git add"
+    ]
+  },
+  ...
+```
+
 
 ## Note: ESLintと併用する場合
 
@@ -158,7 +184,7 @@ hook_add = '''
         autocmd BufWritePre *.css Neoformat
         autocmd BufWritePre *.scss Neoformat
     augroup END
-'''
+```
 
 ## 参考
 

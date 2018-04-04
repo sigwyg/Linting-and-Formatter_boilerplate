@@ -1,4 +1,5 @@
 # Linting-and-Formatter_boilerplate
+![demo](./ALE_styleint-fix.gif)
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
@@ -126,12 +127,12 @@ prettier-eslintから着想を得たらしい、prettier-stylelintがあるが�
 公式でいくつかのエディタに対応している旨が紹介されている。
 [Editor Integration](https://prettier.io/docs/en/editors.html)
 
-Vimの場合はNeoformatがシンプルで良さそうだったが、`stylelint --fix`だと、
-標準出力の受け渡しまわりが巧くできなかったのでALEにした。
 
 いちおう両方とも紹介する。以下はdein.vimを使っている場合
 
 ### ALE
+
+非同期でチェックが走るので、Syntasticなんかより軽い。設定項目が少なく、標準で多くの言語とツールに対応している。AirLineに対応している点もポイント高い。
 
 ```dein.toml
 [[plugins]]
@@ -149,6 +150,8 @@ hook_add = '''
 ```
 
 ### Neoformat
+
+シンプルで良さそうだったが、標準で`stylelint --fix`に対応しておらず、標準出力の受け渡しまわりが巧くできなかった。ひとまず例として紹介しておく。
 
 ```dein.toml
 [[plugins]]

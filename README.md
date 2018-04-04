@@ -1,5 +1,5 @@
 # Linting-and-Formatter_boilerplate
-![demo](./ALE_styleint-fix.gif)
+![demo](./ALE_stylelint-fix.gif)
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 

@@ -16,10 +16,10 @@
     "format:css": "stylelint --fix src/**/*.{css,pcss,scss}"
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "src/**/*.{js,json}": [
         "eslint --fix", "git add"
     ],
-    "*.{css,scss}": [
+    "src/**/*.{css,scss}": [
         "stylelint --fix", "git add"
     ]
   },

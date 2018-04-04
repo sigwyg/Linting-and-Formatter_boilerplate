@@ -7,13 +7,16 @@ LinterとFormatterの個人的なboilerplateっぽいの
 
 ## Feature
 
-- Prettier -> ESLint
+JSはESLint。CSSはStylelintを使います。  
+FormatterとしてPrettierを使用。これはJSのみ。  
+git commit時に自動整形されるようにしておく。
+
+Formatterはコードの整形はするが警告出してくれない。考える必要のある箇所だけ指摘させるほうが良い。
+PrettierそのものはCSSにも対応しているが、Stylelintと併用しようとすると、まだ足りない感じなので様子見。コーディングルールに関しては、特に規定しないが、一例として、無難なルールを設定している。
+
 - [eslint-config-standard](https://github.com/standard/eslint-config-standard)
-- Stylelint
 - [stylelint-config-standard](https://github.com/stylelint/stylelint-config-standard)
 - [Pre-commit Hook](https://prettier.io/docs/en/precommit.html)
-
-Formatterはコードの整形はするが警告出してくれないので、人間が考える必要のないミスだけ修正させる方法が良い。
 
 
 ## Install

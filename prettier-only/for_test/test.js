@@ -10,13 +10,13 @@ function hoge() {
     return false
 }
 
-// several lines
+// prettier-ignore
 import {
   CollectionDashboard,
   DashboardPlaceholder
 } from "../components/collections/collection-dashboard/main";
 
-// prettier-ignore
+// several lines
 import {
   CollectionDashboard,
   DashboardPlaceholder

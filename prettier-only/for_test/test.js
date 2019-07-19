@@ -56,3 +56,7 @@ var widgetStructure = `<div id="${widgetID}">` +
                                 })() +
                             '</div>' +
                         '</div>';
+
+// long html strings
+var quote-and-plus   = '<div id="' + widgetContentID + '" style="' + widgetContentStyles + '">' + '</div>'
+var template-literal = `<div id="${widgetContentID}" style="${widgetContentStyles}"></div>`

@@ -1,0 +1,15 @@
+{
+  "name": "prettier-only",
+  "version": "1.0.0",
+  "description": "Prettier単体でテスト用",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

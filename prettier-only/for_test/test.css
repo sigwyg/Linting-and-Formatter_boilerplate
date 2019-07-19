@@ -1,0 +1,35 @@
+body {
+	  color: red;
+  background-image: url(./example.png);
+}
+h1::after {
+  color: #ffc;
+  content: "🌟";
+}
+p {
+    font-weight: bold;
+}
+p {
+    font-weight: normal;
+}
+.selectors {
+    font-size:16px;
+    z-index: 10;
+    top: 0;
+    font-family: sans-serif;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    overflow: hidden;
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    border: 10px solid #333;
+    margin: 10px;
+    background: #000;
+    height: 100px;
+    color: #fff;
+    text-align: right;
+}

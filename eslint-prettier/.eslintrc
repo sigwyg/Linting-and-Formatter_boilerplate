@@ -1,5 +1,5 @@
 {
-  "extends": [ 
+  "extends": [
     "standard",
     "prettier",
     "prettier/standard"
@@ -13,6 +13,6 @@
     "es6": true
   },
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "warn"
   }
 }

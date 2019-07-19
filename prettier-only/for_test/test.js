@@ -38,9 +38,9 @@ var widgetStructure = '<div id=' + widgetID + '>' +
                         '</div>';
 
 // long html strings(use template literal)
-var widgetStructure = "<div id=${widgetID}>" +
-                           "<h2 id=${widgetTitleID}>${widgetTitle}</h2>" +
-                            "<div id=${widgetContentID} style=${widgetContentStyles}" +
+var widgetStructure = `<div id="${widgetID}">` +
+                           `<h2 id="${widgetTitleID}">${widgetTitle}</h2>` +
+                            `<div id="${widgetContentID}" style="${widgetContentStyles}"` +
                                 (function() {
                                     var paras = '';
                                     for (var i = 0; i < paraItems.length; ++i) {

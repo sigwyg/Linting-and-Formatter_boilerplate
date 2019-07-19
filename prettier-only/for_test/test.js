@@ -16,6 +16,13 @@ import {
   DashboardPlaceholder
 } from "../components/collections/collection-dashboard/main";
 
+// special case(describe, it, test)
+describe("NodeRegistry", () => {
+  it("makes no request if there are no nodes to prefetch, even if the cache is stale", async () => {
+    // The above line exceeds the print width but stayed on one line anyway.
+  });
+});
+
 // long html strings
 var widgetStructure = '<div id=' + widgetID + '>' +
                            '<h2 id="' + widgetTitleID + '">' + widgetTitle + '</h2>' +

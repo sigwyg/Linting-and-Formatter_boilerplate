@@ -16,6 +16,12 @@ import {
   DashboardPlaceholder
 } from "../components/collections/collection-dashboard/main";
 
+// prettier-ignore
+import {
+  CollectionDashboard,
+  DashboardPlaceholder
+} from "../components/collections/collection-dashboard/main";
+
 // special case(describe, it, test)
 describe("NodeRegistry", () => {
   it("makes no request if there are no nodes to prefetch, even if the cache is stale", async () => {

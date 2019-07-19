@@ -10,23 +10,16 @@ function hoge() {
     return false
 }
 
-// js hado-ken
-getData(function (a) {
-  getMoreData(a, function (b) {
-    getMoreData(b, function (c) {
-      getMoreData(c, function (d) {
-        getMoreData(d, function (e) {
-          console.log(e);
-        });
-      });
-    });
-  });
-});
-function getData(hoge) {
-  return hoge;
-}
-function getMoreData(hoge) {
-  return hoge++;
-}
-
-console.log(foo)
+// long html strings
+var widgetStructure = '<div id=' + widgetID + '>' +
+                           '<h2 id="' + widgetTitleID + '">' + widgetTitle + '</h2>' +
+                            '<div id="' + widgetContentID + '" style="' + widgetContentStyles + '">' +
+                                (function() {
+                                    var paras = '';
+                                    for (var i = 0; i < paraItems.length; ++i) {
+                                        paras += '<p>' + paraItems[i] + '</p>';
+                                    }
+                                    return paras;
+                                })() +
+                            '</div>' +
+                        '</div>';

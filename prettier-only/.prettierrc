@@ -1,7 +1,7 @@
 {
   "tabWidth": 5,
   "useTabs": false,
-  "printWidth": 800,
+  "printWidth": 100,
   "semi": true,
   "trailingComma": "es5",
   "bracketSpacing": true,
